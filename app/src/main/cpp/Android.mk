@@ -10,7 +10,7 @@ OPENCV_LIB_TYPE := STATIC
 
 #设定OpenCV.mk文件的地址
 ifeq ("$(wildcard $(OPENCV_MK_PATH))","")
-include E:\project\JAVA_soft\EVMHR\native\jni\OpenCV.mk
+include /Users/mirsuhail/Workspace/old_projects/Temp/EVMHR/app/src/main/cpp/native/jni/OpenCV.mk
 else
 include $(OPENCV_MK_PATH)
 endif
@@ -28,3 +28,5 @@ LOCAL_LDLIBS +=  -lm -llog -ljnigraphics
 
 #编译为动态链接库
 include $(BUILD_SHARED_LIBRARY)
+LOCAL_SHORT_COMMANDS := true //(Android.mk)
+

@@ -1,5 +1,6 @@
 package cn.edu.seu.evmhr;
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -181,6 +182,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         }
     }
 
+    @SuppressLint("InvalidWakeLockTag")
     private void keepWakeLock() {
         if (mWakeLock == null) {
             // 获取唤醒锁,保持屏幕常亮
